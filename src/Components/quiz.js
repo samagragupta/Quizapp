@@ -23,12 +23,9 @@ class Quiz extends Component {
 
   componentDidMount() {
     var url = "https://opentdb.com/api.php?amount=10"
-    console.log("url: " + url);
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        console.log(data.results);
         var questionSet = this.state.questionSet.slice();
         var answerCorrect = this.state.answerCorrect.slice();
         var answersIncorrect = this.state.answersIncorrect.slice();
@@ -47,7 +44,6 @@ class Quiz extends Component {
           arrPlaceholder[1] = answersIncorrect[i]["0"];
           arrPlaceholder[2] = answersIncorrect[i]["1"];
           arrPlaceholder[3] = answersIncorrect[i]["2"];
-          // randomizeArray(arrPlaceholder);
           answersAllRandom[i][0] = arrPlaceholder[0];
           answersAllRandom[i][1] = arrPlaceholder[1];
           answersAllRandom[i][2] = arrPlaceholder[2];
@@ -92,8 +88,7 @@ class Quiz extends Component {
         .bind(this),
       800
     );
-    // event.checked = false;
-    if (this.state.questionNbr === 2) {
+    if (this.state.questionNbr === 9) {
       this.props.sendData('end');
       this.props.sendResult(this.state.correctAnswer);
     }
