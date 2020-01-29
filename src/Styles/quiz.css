@@ -1,0 +1,60 @@
+.container {
+    background-color: blueviolet;
+    margin: 12%;
+    padding: 3%;
+    color: aliceblue;
+    border-radius: 31px;
+}
+.options {
+    padding: 12px 0;
+    /* background-color: blue; */
+    border-radius: 15px;
+    width: 33%;
+}
+.options:hover {
+    font-size: 20px;
+    cursor: pointer;
+}
+.option:hover {
+    cursor: pointer;
+}
+.ques {
+    font-size: 23px;
+}
+.answers {
+    text-align: center;
+    position: relative;
+    bottom: 8rem;
+}
+.correctAnswer {
+    color: aliceblue;
+}
+.correctAnswers {
+    color: green;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.loader {
+    border: 16px solid rgba(255, 255, 255, 0.3);
+    border-top: 16px solid #3498db; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
